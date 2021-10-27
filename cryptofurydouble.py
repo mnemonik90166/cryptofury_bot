@@ -79,9 +79,9 @@ while '1' == '1':
         coin[-7:-4] + ' ' + 'Etherium Classic: ' + 'Price$: ' + atmprice + ' ' + '$' + '   ' + '-->' + ' ' + 'date: ' + dt_string + 'ETC\n' ' \n' 'BUY PRICE: ' + str(
             buyprice) + '  ' + '$\n' 'YOU HOLD: ' + str(koin) + '  ' + coin[
                                                                        -9:] + ' ' + 'coins\n' 'YOUR INVESTMENTS\TOTAL: ' + invest + ' ' + '$ ' + ' ' + '//' + ' ' + invest_rub[
-                                                                                                                                                                  :6] + ' ' + 'RUB\n' '\n' 'TOTAL VALUE IN $ RIGHT NOW: ' + z_dot + ' ' + '$ ' + ' ' + '//' + ' ' + str(
-            z * 70) + ' ' + 'RUB\n' 'YOU EARN / LOSE: ' + ' ' + str(delta)[:-13] + ' ' + '$ ' + ' ' + '//' + ' ' + str(
-            delta * 70)[:-11] + ' ' + 'RUB'])
+                                                                                                                                                                  :6] + ' ' + 'RUB\n' '\n' 'TOTAL VALUE IN $ RIGHT NOW: ' + z_dot[:6] + ' ' + '$ ' + ' ' + '//' + ' ' + str(
+            z * 70)[:6] + ' ' + 'RUB\n' 'YOU EARN / LOSE: ' + ' ' + str(delta)[:6] + ' ' + '$ ' + ' ' + '//' + ' ' + str(
+            delta * 70)[:6] + ' ' + 'RUB'])
 
     driver.close()
     time.sleep(1)
@@ -154,11 +154,11 @@ while '1' == '1':
             buyprice) + '  ' + '$\n' 'YOU HOLD: ' + str(koin) + '  ' + coin[
                                                                        -9:] + ' ' + 'coins\n' 'YOUR INVESTMENTS\TOTAL: ' + invest[
                                                                                                                            :6] + ' ' + '$ ' + ' ' + '//' + ' ' + invest_rub[
-                                                                                                                                                                  :6] + ' ' + 'RUB\n' '\n' 'TOTAL VALUE IN $ RIGHT NOW: ' + z_dot + ' ' + '$ ' + ' ' + '//' + ' ' + str(
+                                                                                                                                                                  :6] + ' ' + 'RUB\n' '\n' 'TOTAL VALUE IN $ RIGHT NOW: ' + z_dot[:6] + ' ' + '$ ' + ' ' + '//' + ' ' + str(
             z * 70) + ' ' + 'RUB\n' 'YOU EARN / LOSE: ' + ' ' + str(delta0)[:-13] + ' ' + '$ ' + ' ' + '//' + ' ' + str(
-            delta0 * 70)[:-11] + ' ' + 'RUB'])
+            delta0 * 70)[:6] + ' ' + 'RUB'])
     telegram_send.send(messages=['TOTAL CREDIT: ' + str(delta_sum)[:6] + ' $ ' + '//// ' + str(delta_sum_rub)[:6] + ' RUB']) # to do total money
 
     driver.close()
-    time.sleep(15) # MODIFY AMOUNT IN SECONDS HOW OFTEN YOU WANNA TG BOT MESSAGES
+    time.sleep(600) # MODIFY AMOUNT IN SECONDS HOW OFTEN YOU WANNA TG BOT MESSAGES
 
